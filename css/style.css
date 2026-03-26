@@ -165,13 +165,9 @@ body {
 }
 
 /* ========== PROJECTS ========== */
-.projects {
-    padding: 0;
-}
-
 .projects .container {
-    max-width: 100%;
-    padding: 0;
+    max-width: 1000px;
+    padding: 4rem 2rem;
 }
 
 .projects-grid {
@@ -183,11 +179,47 @@ body {
 
 .project-card {
     background: #111111;
+    border-radius: 12px;
     overflow: hidden;
     transition: transform 0.3s;
     cursor: pointer;
+    max-width: 900px;
     width: 100%;
-    border-radius: 0;
+    margin: 0 auto;
+}
+
+.project-image {
+    width: 100%;
+    position: relative;
+    padding-bottom: 56.25%; /* Esto es 16:9 (9/16 = 0.5625) */
+    overflow: hidden;
+}
+
+.project-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.05);
+}
+
+.project-card h3 {
+    padding: 1.5rem 1.5rem 0.5rem;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.project-card p {
+    padding: 0 1.5rem 1.5rem;
+    color: #cccccc;
+    font-size: 0.95rem;
+    text-align: center;
 }
 
 .project-image {
