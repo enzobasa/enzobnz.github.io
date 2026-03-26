@@ -430,13 +430,14 @@ footer {
 /* ========== INDICADOR DE SCROLL ========== */
 .scroll-indicator {
     position: absolute;
-    bottom: 30px;
+    bottom: 25px;
     left: 50%;
     transform: translateX(-50%);
     animation: bounce 2s infinite;
     cursor: pointer;
-    opacity: 0.6;
+    opacity: 0.5;
     transition: opacity 0.3s;
+    z-index: 10;
 }
 
 .scroll-indicator:hover {
@@ -444,9 +445,10 @@ footer {
 }
 
 .arrow-down {
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: white;
     display: block;
+    font-weight: 300;
 }
 
 @keyframes bounce {
@@ -454,6 +456,6 @@ footer {
         transform: translateX(-50%) translateY(0);
     }
     50% {
-        transform: translateX(-50%) translateY(10px);
+        transform: translateX(-50%) translateY(8px);
     }
 }
