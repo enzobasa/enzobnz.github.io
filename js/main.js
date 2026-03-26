@@ -30,25 +30,3 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
-
-// ========== ACTIVE LINK HIGHLIGHTING (SOLO para Inicio, Proyectos y Contacto) ==========
-const sections = document.querySelectorAll('#inicio, #proyectos, #contacto');
-const navLinks = document.querySelectorAll('.menu-link');
-
-window.addEventListener('scroll', () => {
-    let current = '';
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        if (scrollY >= sectionTop - 200) {
-            current = section.getAttribute('id');
-        }
-    });
-
-    navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === `#${current}`) {
-            link.classList.add('active');
-        }
-    });
-});
